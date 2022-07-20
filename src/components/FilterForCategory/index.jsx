@@ -1,0 +1,1 @@
+export { FilterForCategory } from "./FilterForCategory";
