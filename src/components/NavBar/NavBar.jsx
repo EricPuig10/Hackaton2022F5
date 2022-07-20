@@ -1,12 +1,17 @@
-import Searcher from "../Searcher/Searcher";
-import Data from "../NavBar/data.json";
+import { Link } from "react-router-dom";
+import { DivLogin, DivLogo, DivNavBar, LoginBtn } from "./NavBar.styled";
 
-export const NavBar = () =>{
-
-    return (
-        <>
-        <Searcher Data={Data} Placeholder="Please enter the name "/>
-        </>
-    )
-    
-}
+export const NavBar = () => {
+  return (
+    <>
+      <DivNavBar>
+        <Link style={{ textDecoration: "none" }} to="/">
+          <DivLogo>LocalArtIsT</DivLogo>
+        </Link>
+        <DivLogin>
+          <LoginBtn>Log In</LoginBtn>
+        </DivLogin>
+      </DivNavBar>
+    </>
+  );
+};

@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import {
   CardDiv,
@@ -15,9 +15,7 @@ import {
   UserProductDiv,
 } from "./Product.styled";
 
-//esta sera el componente card del product
-export const Product = ({product}) => {
-
+export const Product = ({ product }) => {
   return (
     <CardDiv>
       <Link to={`/products/${product.id}`}>
@@ -25,7 +23,10 @@ export const Product = ({product}) => {
           <ImgProduct src={product.img} />
         </ImgDiv>
       </Link>
-      <Link style={{textDecoration:'none', color:'black'}} to={`/products/${product.id}`}>
+      <Link
+        style={{ textDecoration: "none", color: "black" }}
+        to={`/products/${product.id}`}
+      >
         <TextDiv>
           <TitleProduct>{product.name}</TitleProduct>
           <CategoryProduct>{product.category}</CategoryProduct>

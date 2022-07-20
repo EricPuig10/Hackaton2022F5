@@ -14,5 +14,12 @@ export const productServices = {
     return product;
   },
 
-
-}
+  searchProduct(search) {
+    const products = axios
+      .get(`${baseURL}/products?search=${search}`)
+      .then((res) => {
+        return res.data;
+      });
+    return products;
+  },
+};

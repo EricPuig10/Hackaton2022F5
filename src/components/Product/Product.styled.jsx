@@ -8,12 +8,12 @@ export const CardDiv = styled.div`
   border-radius: 2vw;
   border: 1px solid grey;
   position: relative;
-  background-color: #f5f0f0;
+  background-color: var(--card-color);
   &:hover {
     box-shadow: 0 0 10px grey;
   }
   @media (max-width: 450px) {
-    border-color: #dedede;
+    border-color: var(--card-color);
     border-style: solid;
     display: flex;
     align-items: center;
