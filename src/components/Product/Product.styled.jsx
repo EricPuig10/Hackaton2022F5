@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CardDiv = styled.div`
   display: flex;
   width: 14%;
+  height: 320px;
   margin: 1%;
   flex-direction: column;
   border-radius: 2vw;
@@ -14,10 +15,11 @@ export const CardDiv = styled.div`
   }
   @media (max-width: 450px) {
     border-color: var(--card-color);
+    height: auto;
     border-style: solid;
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 90%;
     flex-direction: column;
     margin: 1%;
     margin-left: 3%;
@@ -29,11 +31,16 @@ export const CardDiv = styled.div`
 
 export const ImgDiv = styled.div`
   height: 150px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   color: black;
+  @media (max-width: 450px) {
+    height: 300px;
+    width: 100%;
+  }
 `;
 
 export const ImgProduct = styled.img`
@@ -41,29 +48,48 @@ export const ImgProduct = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 2vw;
+  @media (max-width: 450px) {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const TextDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 30%;
+  height: 120px;
   text-decoration: none;
+  @media (max-width: 450px) {
+    height: 170px;
+  }
 `;
 
 export const TitleProduct = styled.h2`
   font-size: 1em;
   margin-bottom: 0%;
+  text-align: center;
+  @media (max-width: 450px) {
+    font-size: 1.5em;
+  }
 `;
 
 export const CategoryProduct = styled.h3`
   font-size: 0.8em;
+  @media (max-width: 450px) {
+    font-size: 1.3em;
+  }
 `;
 
 export const PriceProduct = styled.h3`
   font-size: 1em;
   margin-top: -1%;
   padding-bottom: 1%;
+  @media (max-width: 450px) {
+    font-size: 1.4em;
+    padding: 0%;
+  }
 `;
 
 export const UserProductDiv = styled.div`
@@ -73,10 +99,10 @@ export const UserProductDiv = styled.div`
   width: 96%;
   height: 10%;
   padding: 1%;
-  padding-bottom: 0%;
+  padding-bottom: 4%;
 
   @media (max-width: 450px) {
-    height: 8.3%;
+
   }
 `;
 

@@ -30,9 +30,11 @@ export const DivLogo = styled.div`
   align-items: center;
   text-decoration: none;
   color: black;
+  font-weight: bold;
 `;
 
 export const Title = styled.h1`
+
   color: black;
   &:hover,
   :active,
@@ -42,12 +44,12 @@ export const Title = styled.h1`
   }
 `;
 
-export const DivSearcher = styled.div`
-  width: 50%;
-  height: 40%;
-  margin-bottom: 1%;
-  margin-left: -5%;
-`;
+// export const DivSearcher = styled.div`
+//   width: 50%;
+//   height: 40%;
+//   margin-bottom: 1%;
+//   margin-left: -5%;
+// `;
 
 export const DivLogin = styled.div`
   display: flex;
@@ -55,6 +57,9 @@ export const DivLogin = styled.div`
   width: 10%;
   align-items: center;
   height: 100%;
+  @media (max-width: 450px) {
+    width: 30%;
+  }
 `;
 
 export const LoginBtn = styled.button`
@@ -65,7 +70,13 @@ export const LoginBtn = styled.button`
   padding-right: 12%;
   border-radius: 2vw;
   font-weight: bold;
+
   &:hover {
     background-color: #ffffff;
+  }
+  @media (max-width: 450px) {
+    height: 60%;
+    width: 100%;
+    font-size: 1.2em;
   }
 `;

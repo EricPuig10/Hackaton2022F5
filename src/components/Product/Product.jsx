@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import {
   CardDiv,
@@ -18,11 +17,10 @@ import {
 export const Product = ({ product }) => {
   return (
     <CardDiv>
-      <Link to={`/products/${product.id}`}>
-        <ImgDiv>
-          <ImgProduct src={product.img} />
-        </ImgDiv>
-      </Link>
+      <ImgDiv>
+        <ImgProduct src={product.img} />
+      </ImgDiv>
+
       <Link
         style={{ textDecoration: "none", color: "black" }}
         to={`/products/${product.id}`}
@@ -39,7 +37,7 @@ export const Product = ({ product }) => {
         </ImageUserDiv>
 
         <NameUserDiv>
-          <NameUser>{product.seller.name}</NameUser>
+          <NameUser>{product.seller.userName}</NameUser>
         </NameUserDiv>
       </UserProductDiv>
     </CardDiv>

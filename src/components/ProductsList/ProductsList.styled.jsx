@@ -12,14 +12,15 @@ export const ContainerProducts = styled.div`
   flex-wrap: wrap;
   width: 90%;
   margin-left: 6%;
-  height: 100vh;
   padding-top: 5%;
-  padding-bottom: 20%;
+  padding-bottom: 5.7%;
   @media (max-width: 450px) {
+    padding-top: 36%;
+    padding-bottom: 15%;
     margin: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 `;
 
@@ -37,6 +38,15 @@ export const SearchInput = styled.input`
   &:focus {
     outline: none;
   }
+  @media (max-width: 450px) {
+    top: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border: 2px solid grey;
+    width: 90%;
+    left:3%;
+    font-size: 1.4em;
+  }
 `;
 
 export const ContainerProductsSearcher = styled.div`
@@ -44,7 +54,7 @@ export const ContainerProductsSearcher = styled.div`
   padding-left: 8%;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 2%;
+  padding-top: 5%;
   width: 80%;
   @media (max-width: 450px) {
     padding-top: 8%;

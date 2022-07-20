@@ -16,8 +16,6 @@ export const DivFooter = styled.div`
   bottom: 0%;
   left: 0%;
   @media (max-width: 450px) {
-    height: 8vh;
-    padding-left: 10%;
-    padding-right: 10%;
+   display: none;
   }
 `;
