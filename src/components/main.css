@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: "Jost", sans-serif;
+}
+
+
+/*variables para todo el proyecto*/
+
+:root{
+    --main-color: white;
+    --scnd-color: #eceff1;
+    --third-color: #13c1ac;
+    --main-border-radius: 2vw;
+}
+
