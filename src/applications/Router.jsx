@@ -6,6 +6,7 @@ import { NavBar } from "../components/NavBar/NavBar";
 import { Register } from "../pages/Register";
 import { Sell} from "../pages/Sell";
 
+
 export default function Router(props) {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
