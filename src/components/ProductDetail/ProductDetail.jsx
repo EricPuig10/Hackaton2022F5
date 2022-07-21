@@ -72,7 +72,7 @@ export const ProductDetail = () => {
             <CardImg src={product.img} />
             <Link style={{ textDecoration: "none" }} to="/sell">
               <BuyBtn>
-              <i className="fa-solid fa-cart-shopping fa-xl"></i>
+                <i className="fa-solid fa-cart-shopping fa-xl"></i>
               </BuyBtn>
             </Link>
           </DivCard>

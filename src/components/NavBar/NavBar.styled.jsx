@@ -6,7 +6,7 @@ export const DivNavBar = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-left: 1%;
-  height: 9vh;
+  height: 11vh;
   width: 80%;
   padding-left: 10%;
   padding-right: 10%;
@@ -15,7 +15,7 @@ export const DivNavBar = styled.div`
   top: 0%;
   left: 0%;
   @media (max-width: 450px) {
-    height: 8vh;
+    height: 9vh;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -30,16 +30,19 @@ export const DivLogo = styled.div`
   align-items: center;
   text-decoration: none;
   color: black;
+  margin-top: -0.7%;
   @media (max-width: 450px) {
     margin-left: -10%;
+    width: 38%;
+    margin-top: -1%;
   }
 `;
 
 export const ImgLogo = styled.img`
-width:100%;
-height: 100%;
-object-fit: cover;
-`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
 export const Title = styled.h1`
   color: black;
@@ -52,17 +55,25 @@ export const Title = styled.h1`
 `;
 
 export const DivSearcher = styled.div`
+  display: flex;
+  position: fixed;
+  top: 5.2%;
+  left: 27%;
+  z-index: 10000;
+  cursor: pointer;
+  @media (max-width: 1000px) {
     display: flex;
+    flex-direction: column;
     position: fixed;
-    top:4.6%;
-    left:27%;
+    top: 5%;
+    left: 50%;
     z-index: 10000;
-    cursor: pointer;
+  }
   @media (max-width: 450px) {
     display: flex;
     position: fixed;
-    top:3.8%;
-    left:50%;
+    top: 5%;
+    left: 50%;
     z-index: 10000;
   }
 `;
@@ -74,9 +85,11 @@ export const DivLogin = styled.div`
   align-items: center;
   height: 100%;
   color: black;
-  margin-top: 0.2%;
+  margin-top: -0.6%;
   @media (max-width: 450px) {
-    width:20%;
+    width: 20%;
+    font-size: 0.9em;
+    margin-top: 4.2%;
     /* display: none; */
   }
 `;
@@ -99,8 +112,9 @@ export const LoginBtn = styled.button`
     height: 60%;
     width: 100%;
     font-size: 1.4em;
-    margin-left: 8%;
-    padding: 6%;
+    margin-left: 4%;
+    padding: 12%;
+    padding-left: 0%;
     border: none;
   }
 `;

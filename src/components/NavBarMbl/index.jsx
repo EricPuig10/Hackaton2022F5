@@ -1,1 +1,0 @@
-export { NavBarMbl } from "./NavBarMbl";

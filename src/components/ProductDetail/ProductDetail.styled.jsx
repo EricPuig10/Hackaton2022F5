@@ -17,7 +17,7 @@ export const DivMainDetail = styled.div`
   width: 80%;
   background-color: #ffffff;
   margin-top: 2%;
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     padding-top: 8%;
     flex-direction: column;
     width: 100%;
@@ -123,15 +123,17 @@ export const BuyBtn = styled.button`
   height: 15%;
   text-align: center;
   position: absolute;
-  top:5%;
+  top: 5%;
   left: 77%;
   background-color: #d0d0d0;
   @media (max-width: 450px) {
-    font-size: 1.4em;
-    width: 20%;
+    font-size: 1.2em;
+    top: -1%;
+    width: 12%;
     border-radius: 50%;
     margin-top: 2%;
     text-align: center;
     padding-left: 0;
+    height: 16%;
   }
 `;

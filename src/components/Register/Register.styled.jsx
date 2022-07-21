@@ -22,6 +22,7 @@ export const ContainerTitleForm = styled.h3`
   @media (max-width: 450px) {
     padding: 10px 20px;
     font-size: 1.4em;
+
   }
 `;
 
@@ -69,8 +70,4 @@ export const BtnSend = styled.button`
     padding: 20px 40px;
     font-size: 1.6em;
   }
-`;
-
-export const Paragraph = styled.p`
-  text-align: center;
 `;

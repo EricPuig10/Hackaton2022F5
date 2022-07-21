@@ -1,14 +1,12 @@
-import { Link } from "react-router-dom";
 import {
   BtnSend,
   ContainerButton,
   ContainerTitleForm,
   DivLogIn,
   InputForm,
-  Paragraph,
-} from "./LogIn.styled";
+} from "./Register.styled";
 
-export const LogIn = () => {
+export const Register = () => {
   return (
     <>
       <DivLogIn>
@@ -25,13 +23,14 @@ export const LogIn = () => {
               />
             </div>
 
-            <InputForm type="text" placeholder="Ingrese su contraseña" />
+            <InputForm type="text" placeholder="Ingrese su teléfono" />
+
+            <InputForm type="text" placeholder="Ingrese email de contacto" />
+
+            <InputForm type="text" placeholder="Ingrese su DNI" />
           </div>
-          <Link to="/register">
-            <Paragraph>Aún no estas registrado?</Paragraph>
-          </Link>
           <ContainerButton>
-            <BtnSend>Log In</BtnSend>
+            <BtnSend>Enviar datos</BtnSend>
           </ContainerButton>
         </form>
       </DivLogIn>

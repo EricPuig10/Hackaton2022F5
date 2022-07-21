@@ -13,6 +13,15 @@ export const CardDiv = styled.div`
   &:hover {
     box-shadow: 0 0 10px grey;
   }
+  @media (max-width: 1150px) {
+    width: 20%;
+  }
+  @media (max-width: 850px) {
+    width: 30%;
+  }
+  @media (max-width: 750px) {
+    width: 40%;
+  }
   @media (max-width: 450px) {
     border-color: var(--card-color);
     height: auto;

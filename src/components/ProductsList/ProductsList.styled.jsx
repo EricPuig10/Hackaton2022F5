@@ -32,19 +32,20 @@ export const SearchInput = styled.input`
   border: none;
   padding-left: 2%;
   position: fixed;
-  top: 2%;
+  top: 2.7%;
   left: 30%;
   z-index: 100000;
   &:focus {
     outline: none;
   }
+
   @media (max-width: 450px) {
     top: 10%;
     padding-top: 4%;
     padding-bottom: 4%;
     border: 2px solid grey;
     width: 90%;
-    left:3%;
+    left: 3%;
     font-size: 1.4em;
   }
 `;
@@ -122,15 +123,16 @@ export const ImgProductSearched = styled.img`
 
 export const ContainerSearcherAndButtons = styled.div`
   background-color: transparent;
-@media (max-width: 450px) {
-  display: flex;
-  background-color: var(--nav-color);
-  width:100%;
-  height:110px;
-  margin-top: -29%;
-  padding-top: 0%;
-  margin-bottom: 0%;
-  position: fixed;
-  z-index: 100000;
-}
-`
+  margin-top: 0%;
+  @media (max-width: 450px) {
+    display: flex;
+    background-color: var(--nav-color);
+    width: 100%;
+    height: 110px;
+    margin-top: -29%;
+    padding-top: 0%;
+    margin-bottom: 0%;
+    position: fixed;
+    z-index: 100000;
+  }
+`;

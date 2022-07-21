@@ -1,0 +1,159 @@
+.trendingNews {
+  background-color: rgb(24, 23, 23);
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.trendingNews img {
+  width: 98.8vw;
+  height: 91vh;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.sliderCont {
+  display: flex;
+}
+
+.textSliderCont {
+  /* border: 5px solid red; */
+  height: 76vh;
+  width: 50vw;
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.titleSlider {
+  color: white;
+  position: absolute;
+  top: 2%;
+  z-index: 2;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.dateSlider {
+  z-index: 2;
+  color: white;
+  font-size: 2.5em;
+  position: absolute;
+  font-weight: bold;
+  top: 30%;
+}
+
+.infoSlider {
+  z-index: 2;
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  font-weight: bold;
+  top: 50%;
+}
+
+.btnSlider {
+  background-color: #11acdc;
+  border: 2px solid #393f41;
+  position: absolute;
+  top: 75%;
+  padding: 2%;
+  border-radius: 2vw;
+  color: white;
+  font-size: 1em;
+}
+.dots-container {
+  display: flex;
+  position: absolute;
+  top: 90%;
+}
+
+.dot {
+  background-color: transparent;
+  color: white;
+  border-style: none;
+}
+
+.selected-dot {
+  font-size: 1.5em;
+}
+.butLeft {
+  position: absolute;
+  top: 45%;
+  background-color: transparent;
+  border: none;
+  left: 1%;
+  color: white;
+}
+
+.butLeft:hover {
+  font-size: 1.2em;
+}
+
+.butRight {
+  position: absolute;
+  top: 45%;
+  background-color: transparent;
+  border: none;
+  right: 1%;
+  color: white;
+}
+
+.butRight:hover {
+  font-size: 1.2em;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+@media only screen and (max-width: 800px) {
+  .trendingFilms {
+    display: none;
+  }
+
+  .trendingFilms img {
+    display: none;
+  }
+
+  .trendingNews {
+    background-color: rgb(24, 23, 23);
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .trendingNews img {
+    display: none;
+  }
+  .sliderCont {
+    display: flex;
+  }
+
+  .dots-container {
+    display: flex;
+    position: absolute;
+    top: 80%;
+  }
+
+  .dot {
+    background-color: transparent;
+    color: white;
+    border-style: none;
+    font-size: 0.6em;
+  }
+
+  .selected-dot {
+    font-size: 1.2em;
+  }
+}
