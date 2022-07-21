@@ -9,10 +9,15 @@ export const messageServices = {
 
   getMessagesByProductId(id) {
     const messages = axios
-      .get(baseURL + "/messages/" + id + "/products")
+      .get(baseURL + "/products/" + id + "/messages")
       .then((res) => res.data);
     return messages;
   },
 
-
-}
+  createMessage(data) {
+    const message = axios
+      .post(baseURL + "/messages", { ...data, userId: 7 })
+      .then((res) => res.data);
+    return message;
+  },
+};

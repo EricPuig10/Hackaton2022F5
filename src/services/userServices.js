@@ -6,5 +6,4 @@ export const userServices = {
     const product = axios.get(baseURL + "/users/" + id).then((res) => res.data);
     return product;
   },
-
 };

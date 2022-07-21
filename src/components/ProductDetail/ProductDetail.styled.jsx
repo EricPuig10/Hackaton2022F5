@@ -18,9 +18,10 @@ export const DivMainDetail = styled.div`
   background-color: #ffffff;
   margin-top: 2%;
   @media (max-width: 450px) {
-    padding-top: 10%;
+    padding-top: 8%;
     flex-direction: column;
     width: 100%;
+    height: auto;
   }
 `;
 export const DivCard = styled.div`
@@ -39,16 +40,19 @@ export const DivInfo = styled.div`
   width: 50%;
   height: 60%;
   margin-top: -2%;
+  margin-left: 3%;
   @media (max-width: 450px) {
     width: 90%;
-    margin-left:8%;
+    margin-left: 3%;
   }
 `;
 
 export const TextInfo = styled.p`
   font-size: 1.4em;
+  margin-left: -10%;
   @media (max-width: 450px) {
-    font-size:1.6em;
+    font-size: 1.6em;
+    margin-left: 3%;
   }
 `;
 
@@ -61,8 +65,18 @@ export const CardImg = styled.img`
 `;
 
 export const DivForm = styled.form`
-  width: 80%;
+  width: 100%;
   height: 30%;
+  display: flex;
+
+  @media (max-width: 450px) {
+    padding-left: 0;
+    margin-left: 0%;
+    margin-top: -8%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
 `;
 
 export const InputMessage = styled.textarea`
@@ -75,10 +89,26 @@ export const InputMessage = styled.textarea`
   min-height: 50px;
   min-width: 200px;
   @media (max-width: 450px) {
-    font-size:1.6em;
+    font-size: 1.6em;
   }
 `;
 
 export const SubmitBtn = styled.button`
-
-`
+  border-radius: 50%;
+  border: 1px solid grey;
+  margin-left: -10%;
+  padding: 0.6%;
+  margin-top: 4.5%;
+  height: 44%;
+  width: 7%;
+  text-align: center;
+  padding-left: 0;
+  @media (max-width: 450px) {
+    font-size: 1.4em;
+    width: 20%;
+    border-radius: 50%;
+    margin-top: 2%;
+    text-align: center;
+    padding-left: 0;
+  }
+`;
