@@ -1,12 +1,12 @@
-import { DivSellForm} from "./SellForm.styled";
+import { ContainerTitleForm, DivSellForm} from "./SellForm.styled";
 
 export const SellForm = () => {
   return (
     <>
     <DivSellForm>
-    <div className="containerTitleForm">
+    <ContainerTitleForm>
           <p className="titleForm">Por favor introduce tus datos</p>
-    </div>
+    </ContainerTitleForm>
     <form id="miFormulario">
         <div className="allInputs">
           <div className="inputForm">

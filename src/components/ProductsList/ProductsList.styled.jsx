@@ -15,7 +15,7 @@ export const ContainerProducts = styled.div`
   padding-top: 5%;
   padding-bottom: 5.7%;
   @media (max-width: 450px) {
-    padding-top: 22%;
+    padding-top: 46%;
     padding-bottom: 15%;
     margin: 0;
     display: flex;
@@ -126,9 +126,11 @@ export const ContainerSearcherAndButtons = styled.div`
   display: flex;
   background-color: var(--nav-color);
   width:100%;
-  height:100px;
-  margin-top: -5%;
+  height:110px;
+  margin-top: -28.5%;
   padding-top: 0%;
   margin-bottom: 0%;
+  position: fixed;
+  z-index: 100000;
 }
 `
