@@ -69,6 +69,7 @@ export const DivWithoutSearchingResults = styled.div`
   display: flex;
   justify-content: center;
   width: 90%;
+  height: 57vh;
 `;
 
 export const ProductCardDivSearched = styled.div`
