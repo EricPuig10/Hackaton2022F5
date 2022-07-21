@@ -1,8 +1,17 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+import { Footer } from './components/Footer/Footer';
+import { NavBar } from './components/NavBar/NavBar';
+
+
+test('footer ok', () => {
+  render(<Footer />);
+  const linkElement = screen.getByText(/Copyright/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+test('logo visible', () => {
+  render(<NavBar />);
+  const linkElement = screen.getByText(/LocalArtIsT/i);
   expect(linkElement).toBeInTheDocument();
 });
