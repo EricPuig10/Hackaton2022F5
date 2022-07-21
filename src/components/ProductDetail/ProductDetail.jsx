@@ -20,9 +20,7 @@ export const ProductDetail = () => {
   const [user, setUser] = useState();
   const [userName, setUserName] = useState("");
   const { id } = useParams();
-
   const [messages, setMessages] = useState([]);
-
   const [text, setText] = useState("");
 
   useEffect(() => {
@@ -94,6 +92,7 @@ export const ProductDetail = () => {
             </DivForm>
           </DivInfo>
         </DivMainDetail>
+        <Link style={{ textDecoration: "none" }} to="/sell">Comprar</Link>
       </Main>
     </>
   );
