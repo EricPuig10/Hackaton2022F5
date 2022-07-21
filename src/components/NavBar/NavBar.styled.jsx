@@ -68,6 +68,7 @@ export const DivLogin = styled.div`
   width: 10%;
   align-items: center;
   height: 100%;
+  color: black;
   @media (max-width: 450px) {
     width: 30%;
     /* display: none; */
@@ -82,7 +83,7 @@ export const LoginBtn = styled.button`
   padding-right: 12%;
   border-radius: 2vw;
   font-weight: bold;
-
+  color: black;
   &:hover {
     background-color: #ffffff;
   }

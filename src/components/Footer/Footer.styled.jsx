@@ -12,7 +12,7 @@ export const DivFooter = styled.div`
   padding-left: 10%;
   padding-right: 10%;
   z-index: 10000;
-  position: relative;
+  position: fixed;
   bottom: 0%;
   left: 0%;
   @media (max-width: 450px) {
