@@ -113,7 +113,7 @@ export const NameUser = styled.p`
 `;
 
 export const ImageUserDiv = styled.div`
-  width: 14%;
+  width: 17%;
   margin: 1%;
   height: 90%;
   border-radius: 50%;

@@ -6,11 +6,13 @@ import {
 import { Product } from "../Product/Product";
 import { useEffect, useState } from "react";
 import { productServices } from "../../services/productServices";
+import { DivSearcher } from "../NavBar/NavBar.styled";
 
 export const ProductsList = () => {
   const [products, setProducts] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [search, setSearch] = useState("");
+  const [buttonClicked, setButtonClicked] = useState(true);
 
   useEffect(() => {
     getAllProducts();
@@ -27,6 +29,10 @@ export const ProductsList = () => {
         setSuggestions(res);
       }
     });
+  };
+
+  const handleButtonClick = () => {
+    setButtonClicked(!buttonClicked);
   };
 
   //   const cancelSearch = () => {
@@ -47,13 +53,22 @@ export const ProductsList = () => {
 
   return (
     <ContainerProducts>
-      <SearchInput
-        onChange={handleChange}
-        typeof="search"
-        name="search"
-        placeholder="Search"
-        value={search}
-      />
+      <DivSearcher onClick={handleButtonClick}>
+        <i className="fa-solid fa-magnifying-glass fa-xl"></i>
+      </DivSearcher>
+
+      {buttonClicked ? (
+        <SearchInput
+          onChange={handleChange}
+          typeof="search"
+          name="search"
+          placeholder="Search"
+          value={search}
+        />
+      ) : (
+        ""
+      )}
+
       {search === "" ? (
         <>
           {products.map((product, key) => (

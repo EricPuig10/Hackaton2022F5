@@ -15,7 +15,7 @@ export const ContainerProducts = styled.div`
   padding-top: 5%;
   padding-bottom: 5.7%;
   @media (max-width: 450px) {
-    padding-top: 36%;
+    padding-top: 34%;
     padding-bottom: 15%;
     margin: 0;
     display: flex;
@@ -25,7 +25,7 @@ export const ContainerProducts = styled.div`
 `;
 
 export const SearchInput = styled.input`
-  height: 1%;
+  height: 6px;
   width: 30%;
   border-radius: 2vw;
   padding: 1%;
