@@ -102,7 +102,6 @@ export const UserProductDiv = styled.div`
   padding-bottom: 4%;
 
   @media (max-width: 450px) {
-
   }
 `;
 

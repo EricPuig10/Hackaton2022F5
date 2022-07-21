@@ -6,28 +6,31 @@ import {
   DivForm,
   DivInfo,
   DivMainDetail,
-  InputMessage,
   Main,
   SubmitBtn,
   TextInfo,
 } from "./ProductDetail.styled";
 import { useParams } from "react-router-dom";
-
-import { userServices } from "../../services/userServices";
+import { messageServices } from "../../services/messagesServices";
+import InputEmojiWithRef from "react-input-emoji";
 
 export const ProductDetail = () => {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState({ messages: [] });
+  // eslint-disable-next-line
   const [user, setUser] = useState();
   const [userName, setUserName] = useState("");
   const { id } = useParams();
 
-  const [messages, setMessages] = useState({ message: "" });
+  const [messages, setMessages] = useState([]);
+
+  const [text, setText] = useState("");
 
   useEffect(() => {
-    getMomentById(id);
+    getProductById(id);
+    getMessagesByProduct(id);
   }, [id]);
 
-  const getMomentById = (id) => {
+  const getProductById = (id) => {
     productServices.getProductById(id).then((res) => {
       setProduct(res);
       setUser(res.seller);
@@ -35,37 +38,33 @@ export const ProductDetail = () => {
     });
   };
 
-  //   const getUserById = (id) => {
-  //     userServices.getUserById(id).then((res) => {
-  //       setUser(res);
-  //     });
-  //   };
+  const getMessagesByProduct = (id) => {
+    messageServices.getMessagesByProductId(id).then((res) => {
+      setMessages(res);
+    });
+  };
 
-  const valueToState = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    console.log(JSON.stringify(messages, null, 1));
-    setMessages({ ...messages, [name]: value });
+  const addNewMessage = (data) => {
+    messageServices.createMessage(data).then((res) => {
+      setMessages([...messages, res]);
+    });
   };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    //addNewMessage(messages)
+    let newMessage = { message: text, productId: product.id };
+    if (text.length < 1) {
+      return;
+    }
+    addNewMessage(newMessage);
     window.alert(`Your message have been sent`);
     resetInputsForm();
   };
 
-  const addNewMessage = (data) => {
-    // messagesServices.addMessage(data).then((res) => {
-    //   setMessages([...messages, res]);
-    // });
-  };
-
   const resetInputsForm = () => {
-    setMessages({message:""});
+    setText("");
   };
 
-  console.log(messages)
   return (
     <>
       <Main>
@@ -80,14 +79,18 @@ export const ProductDetail = () => {
             <TextInfo>Precio: {product.price} € </TextInfo>
             <TextInfo>Autor: {userName}</TextInfo>
 
-            <DivForm onSubmit={onSubmitHandler}>
-              <InputMessage
-                name="message"
-                placeholder="Contacta conmigo"
-                maxLength="60"
-                onChange={valueToState}
+            <DivForm>
+              <SubmitBtn onClick={onSubmitHandler}>
+                <i className="fa-regular fa-paper-plane fa-xl"></i>
+              </SubmitBtn>
+              <InputEmojiWithRef
+                fontSize={22}
+                value={text}
+                type="text"
+                maxLength="254"
+                onChange={setText}
+                placeholder="Type a message..."
               />
-              <SubmitBtn type="submit">Enviar</SubmitBtn>
             </DivForm>
           </DivInfo>
         </DivMainDetail>
