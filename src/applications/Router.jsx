@@ -14,7 +14,7 @@ export default function Router(props) {
         <Route path="/products/:id" element={<DetailPage />} />
         <Route path="/nav" element={<NavBar />} />
         <Route path="/login" element={<Register />} />
-        <Router path="/sell" element={<Sell />} />
+        <Route path="/sell" element={<Sell />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { productServices } from "../../services/productServices";
 import {
+  BuyBtn,
   CardImg,
   DivCard,
   DivForm,
@@ -10,7 +11,7 @@ import {
   SubmitBtn,
   TextInfo,
 } from "./ProductDetail.styled";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { messageServices } from "../../services/messagesServices";
 import InputEmojiWithRef from "react-input-emoji";
 
@@ -89,10 +90,14 @@ export const ProductDetail = () => {
                 onChange={setText}
                 placeholder="Type a message..."
               />
+              <Link style={{ textDecoration: "none" }} to="/sell">
+                <BuyBtn>
+                  <i className="fa-solid fa-cart-circle-plus"></i>
+                </BuyBtn>
+              </Link>
             </DivForm>
           </DivInfo>
         </DivMainDetail>
-        <Link style={{ textDecoration: "none" }} to="/sell">Comprar</Link>
       </Main>
     </>
   );

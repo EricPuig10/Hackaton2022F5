@@ -112,3 +112,23 @@ export const SubmitBtn = styled.button`
     padding-left: 0;
   }
 `;
+
+export const BuyBtn = styled.button`
+  border-radius: 50%;
+  border: 1px solid grey;
+  margin-left: -10%;
+  padding: 0.6%;
+  margin-top: 4.5%;
+  height: 44%;
+  width: 7%;
+  text-align: center;
+  padding-left: 0;
+  @media (max-width: 450px) {
+    font-size: 1.4em;
+    width: 20%;
+    border-radius: 50%;
+    margin-top: 2%;
+    text-align: center;
+    padding-left: 0;
+  }
+`;
