@@ -70,7 +70,7 @@ export const DivLogin = styled.div`
   height: 100%;
   color: black;
   @media (max-width: 450px) {
-    width: 30%;
+    width:20%;
     /* display: none; */
   }
 `;
@@ -90,7 +90,9 @@ export const LoginBtn = styled.button`
   @media (max-width: 450px) {
     height: 60%;
     width: 100%;
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-left: 8%;
+    padding: 6%;
+    border: none;
   }
 `;

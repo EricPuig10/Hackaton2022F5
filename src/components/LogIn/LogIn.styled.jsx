@@ -7,12 +7,22 @@ export const DivLogIn = styled.div`
   width: 80vw;
   height: auto;
   margin: 15vh;
+  @media (max-width: 450px) {
+    margin: 8%;
+    padding-top: 8%;
+    margin-left: 10%;
+  }
 `;
 
 export const ContainerTitleForm = styled.p`
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 30px;
+  @media (max-width: 450px) {
+    padding: 10px 20px;
+    font-size: 1.4em;
+
+  }
 `;
 
 export const InputForm = styled.input`
@@ -24,6 +34,10 @@ export const InputForm = styled.input`
   display: block;
   border-radius: 2vw;
   font-size: 1em;
+  @media (max-width: 450px) {
+    padding: 18px 30px;
+    font-size: 1.5em;
+  }
 `;
 
 export const ContainerButton = styled.div`
@@ -51,4 +65,8 @@ export const BtnSend = styled.button`
   border: none;
   cursor: pointer;
   padding: 12px 20px;
+  @media (max-width: 450px) {
+    padding: 20px 40px;
+    font-size: 1.6em;
+  }
 `;

@@ -1,5 +1,6 @@
 import {
   ContainerProducts,
+  ContainerSearcherAndButtons,
   DivWithoutSearchingResults,
   SearchInput,
 } from "./ProductsList.styled";
@@ -7,12 +8,40 @@ import { Product } from "../Product/Product";
 import { useEffect, useState } from "react";
 import { productServices } from "../../services/productServices";
 import { DivSearcher } from "../NavBar/NavBar.styled";
+import { FilterForCategory } from "../FilterForCategory/FilterForCategory";
+import {
+  FilterButton,
+  FilterButton1,
+  FilterButton2,
+  FilterButton3,
+  FilterButton4,
+} from "../FilterForCategory/FilterForCategory.styled";
 
 export const ProductsList = () => {
   const [products, setProducts] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [search, setSearch] = useState("");
   const [buttonClicked, setButtonClicked] = useState(true);
+  const [filtredProducts, setFiltredProducts] = useState([]);
+
+  const buttons = [
+    {
+      name: "Todo",
+      value: "todo",
+    },
+    {
+      name: "Pinturas",
+      value: "pinturas",
+    },
+    {
+      name: "Escultura",
+      value: "escultura",
+    },
+    {
+      name: "Fotografias",
+      value: "fotografias",
+    },
+  ];
 
   useEffect(() => {
     getAllProducts();
@@ -50,7 +79,7 @@ export const ProductsList = () => {
   //     e.preventDefault();
   //     searchProduct(search);
   //   };
-
+  console.log(buttons);
   return (
     <ContainerProducts>
       <DivSearcher onClick={handleButtonClick}>
@@ -58,17 +87,23 @@ export const ProductsList = () => {
       </DivSearcher>
 
       {buttonClicked ? (
-        <SearchInput
-          onChange={handleChange}
-          typeof="search"
-          name="search"
-          placeholder="Search"
-          value={search}
-        />
+        <>
+          <ContainerSearcherAndButtons>
+            <SearchInput
+              onChange={handleChange}
+              typeof="search"
+              name="search"
+              placeholder="Search"
+              value={search}
+            />
+            <FilterButton2>Escultura</FilterButton2>
+            <FilterButton3>Cuadros</FilterButton3>
+            <FilterButton4>Grabados</FilterButton4>
+          </ContainerSearcherAndButtons>
+        </>
       ) : (
         ""
       )}
-
       {search === "" ? (
         <>
           {products.map((product, key) => (

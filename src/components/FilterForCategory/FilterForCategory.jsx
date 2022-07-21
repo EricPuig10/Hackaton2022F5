@@ -1,41 +1,43 @@
 import { useEffect, useState } from "react";
 import { productServices } from "../../services/productServices";
+import { Product } from "../Product/Product";
 import { ProductsList } from "../ProductsList/ProductsList";
 
-export const FilterForCategory = () =>{
-    const [filtredProducts, setFiltredProducts] = useState(null);
-    useEffect(() => {
-        setFiltredProducts(productServices.getAllProducts());
-    }, []);
+export const FilterForCategory = () => {
+  const [filtredProducts, setFiltredProducts] = useState([]);
+  useEffect(() => {
+    setFiltredProducts(productServices.getAllProducts());
+  }, []);
 
   function handleProduct(e) {
     let typeProduct = e.target.value;
     typeProduct !== "todo"
       ? setFiltredProducts(productServices.filterProduct(typeProduct))
-      : setFiltredProducts(productServices.getAllProducts());}
+      : setFiltredProducts(productServices.getAllProducts());
+  }
 
-      const buttons = [
-        {
-          name: "Todo",
-          value: "todo"
-        },
-        {
-          name: "Pinturas",
-          value: "pinturas"
-        },
-        {
-          name: "Escultura",
-          value: "escultura"
-        },
-        {
-          name: "Fotografias",
-          value: "fotografias"
-        }
-      ];
+  const buttons = [
+    {
+      name: "Todo",
+      value: "todo",
+    },
+    {
+      name: "Pinturas",
+      value: "pinturas",
+    },
+    {
+      name: "Escultura",
+      value: "escultura",
+    },
+    {
+      name: "Fotografias",
+      value: "fotografias",
+    },
+  ];
 
-    return (
-        <>
-        {buttons &&
+  return (
+    <>
+      {buttons &&
         buttons.map((type, index) => (
           <>
             <button key={index} value={type.value} onClick={handleProduct}>
@@ -44,11 +46,9 @@ export const FilterForCategory = () =>{
           </>
         ))}
 
-      {filtredProducts &&
-        filtredProducts.map(type => (
-          <ProductsList key={type.id} />
-        ))}
-        </>
-    )
-    
-}
+      {filtredProducts.map((type, key) => (
+        <Product type={type} key={key} />
+      ))}
+    </>
+  );
+};
