@@ -4,6 +4,7 @@ import { DetailPage } from "../pages/DetailPage";
 import { Home } from "../pages/Home";
 import { NavBar } from "../components/NavBar/NavBar";
 import { Register } from "../pages/Register";
+import { Sell} from "../pages/Sell";
 
 export default function Router(props) {
   return (
@@ -13,6 +14,7 @@ export default function Router(props) {
         <Route path="/products/:id" element={<DetailPage />} />
         <Route path="/nav" element={<NavBar />} />
         <Route path="/login" element={<Register />} />
+        <Router path="/sell" element={<Sell />} />
       </Routes>
     </BrowserRouter>
   );
