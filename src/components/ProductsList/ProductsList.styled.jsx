@@ -127,7 +127,7 @@ export const ContainerSearcherAndButtons = styled.div`
   background-color: var(--nav-color);
   width:100%;
   height:110px;
-  margin-top: -28.5%;
+  margin-top: -29%;
   padding-top: 0%;
   margin-bottom: 0%;
   position: fixed;

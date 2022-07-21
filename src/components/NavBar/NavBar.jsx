@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
-import { DivLogin, DivLogo, DivNavBar, LoginBtn } from "./NavBar.styled";
+import { DivLogin, DivLogo, DivNavBar, ImgLogo, LoginBtn } from "./NavBar.styled";
+// import logook from '../../img/logook.png';
+
 
 export const NavBar = () => {
   return (
     <>
       <DivNavBar>
         <Link style={{ textDecoration: "none" }} to="/">
-          <DivLogo>LocalArtIsT</DivLogo>
+          <DivLogo>ArteDeAutor</DivLogo>
+          {/* <DivLogo><ImgLogo src={logook}/></DivLogo> */}
         </Link>
 
         <DivLogin>

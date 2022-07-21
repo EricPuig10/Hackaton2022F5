@@ -23,18 +23,23 @@ export const DivNavBar = styled.div`
 
 export const DivLogo = styled.div`
   height: 100%;
-  width: 10%;
+  width: 30%;
   margin-left: 2%;
   font-size: 1.5em;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: black;
-  font-weight: bold;
   @media (max-width: 450px) {
     margin-left: -10%;
   }
 `;
+
+export const ImgLogo = styled.img`
+width:100%;
+height: 100%;
+object-fit: cover;
+`
 
 export const Title = styled.h1`
   color: black;
@@ -69,6 +74,7 @@ export const DivLogin = styled.div`
   align-items: center;
   height: 100%;
   color: black;
+  margin-top: 0.2%;
   @media (max-width: 450px) {
     width:20%;
     /* display: none; */
@@ -84,7 +90,8 @@ export const LoginBtn = styled.button`
   border-radius: 2vw;
   font-weight: bold;
   color: black;
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
+  background-color: #d0d0d0;
   &:hover {
     background-color: #ffffff;
   }

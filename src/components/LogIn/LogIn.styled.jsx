@@ -14,10 +14,11 @@ export const DivLogIn = styled.div`
   }
 `;
 
-export const ContainerTitleForm = styled.p`
-  font-size: 20px;
+export const ContainerTitleForm = styled.h3`
+  font-size: 18px;
   color: #f1356d;
   margin-bottom: 30px;
+  text-align: center;
   @media (max-width: 450px) {
     padding: 10px 20px;
     font-size: 1.4em;

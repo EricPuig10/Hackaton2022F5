@@ -30,6 +30,7 @@ export const DivCard = styled.div`
   height: 75%;
   display: flex;
   justify-content: center;
+  position: relative;
   @media (max-width: 450px) {
     width: 100%;
     height: 35%;
@@ -103,6 +104,7 @@ export const SubmitBtn = styled.button`
   width: 7%;
   text-align: center;
   padding-left: 0;
+  background-color: #d0d0d0;
   @media (max-width: 450px) {
     font-size: 1.4em;
     width: 20%;
@@ -116,13 +118,14 @@ export const SubmitBtn = styled.button`
 export const BuyBtn = styled.button`
   border-radius: 50%;
   border: 1px solid grey;
-  margin-left: -10%;
   padding: 0.6%;
-  margin-top: 4.5%;
-  height: 44%;
-  width: 7%;
+  width: 10%;
+  height: 15%;
   text-align: center;
-  padding-left: 0;
+  position: absolute;
+  top:5%;
+  left: 77%;
+  background-color: #d0d0d0;
   @media (max-width: 450px) {
     font-size: 1.4em;
     width: 20%;

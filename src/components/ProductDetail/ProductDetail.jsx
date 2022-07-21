@@ -70,6 +70,11 @@ export const ProductDetail = () => {
         <DivMainDetail>
           <DivCard>
             <CardImg src={product.img} />
+            <Link style={{ textDecoration: "none" }} to="/sell">
+              <BuyBtn>
+              <i className="fa-solid fa-cart-shopping fa-xl"></i>
+              </BuyBtn>
+            </Link>
           </DivCard>
           <DivInfo>
             <TextInfo>Título: {product.name}</TextInfo>
@@ -90,11 +95,6 @@ export const ProductDetail = () => {
                 onChange={setText}
                 placeholder="Type a message..."
               />
-              <Link style={{ textDecoration: "none" }} to="/sell">
-                <BuyBtn>
-                  <i className="fa-solid fa-cart-circle-plus"></i>
-                </BuyBtn>
-              </Link>
             </DivForm>
           </DivInfo>
         </DivMainDetail>

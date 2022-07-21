@@ -24,24 +24,7 @@ export const ProductsList = () => {
   const [buttonClicked, setButtonClicked] = useState(true);
   const [filtredProducts, setFiltredProducts] = useState([]);
 
-  const buttons = [
-    {
-      name: "Todo",
-      value: "todo",
-    },
-    {
-      name: "Pinturas",
-      value: "pinturas",
-    },
-    {
-      name: "Escultura",
-      value: "escultura",
-    },
-    {
-      name: "Fotografias",
-      value: "fotografias",
-    },
-  ];
+
 
   useEffect(() => {
     getAllProducts();
@@ -75,11 +58,7 @@ export const ProductsList = () => {
     searchProduct(search);
   };
 
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     searchProduct(search);
-  //   };
-  console.log(buttons);
+
   return (
     <ContainerProducts>
       <DivSearcher onClick={handleButtonClick}>
