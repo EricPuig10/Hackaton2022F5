@@ -63,8 +63,6 @@ En la próxima actualización, nuestro objetivo es que tanto los funciones de *S
 
 
 
-## FAQs
-
 
 
 # Getting Started with Create React App
