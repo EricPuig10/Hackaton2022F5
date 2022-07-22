@@ -1,3 +1,72 @@
+# MARKETPLACE-ARTE DE AUTOR
+![Logo-ArteLocal](./src/img/logo_AA-b.png)
+
+## Información General
+
+Es una web para poder acercar el arte a la gente, los artistas podrán dar a conocer sus creaciones a todo aquel que se sienta atraído por este mundo tan creativo. El anunciante podrá exponer de una forma virtual, una imagen, detalles de su obra, composición y precio,  en el lado del cliente podrá realizar una búsqueda por temática, estilo, autor, marcar sus piezas favoritas y si se siente atraído por cualquier obra se puede poner en contacto con el artista de una forma directa a través de chat.
+
+## Autores
+
+* **Beatriz Trabanco**
+* **Cristina Sanjuan**
+* **Deibi Patiño** 
+* **Elena Pérez**
+* **Eric Puigvendrello** 
+* **María Martínez** 
+* **Susana Gil**
+
+## Capturas de pantalla
+
+![listaProducts](/src/img/VersionDesktop8%20Lista%20Productos.png)
+
+![screenshot02.png](/src/img/versionmovil1.png)
+
+
+
+
+## Tecnologías
+Lista de tecnologías usadas en el desarrollo del proyecto:
+* HTML: Version HTML 5 
+* CSS: Version CSS3
+* [Node.js] (https://nodejs.org/es/)
+* [React] 
+* [IntelliJ] (https://www.jetbrains.com/es-es/idea/) 
+* [Java] (https://www.java.com/es/download/)
+
+
+***
+## Instalación
+Como instalar el repositorio:
+
+1. Ingresar en Visual Studio Code
+2.  Clonar el proyecto con el comando: 
+ ``` 
+git clone https://github.com/carolineromero/libreriaApi
+```
+En Visual Studio Code:
+1. Instalar [React.js](https://es.reactjs.org/)
+2. Instalar [React-router-dom](https://reactrouter.com/).
+
+
+
+## Soporte
+Si tiene cualquier problema póngase en contacto con: 
+> puigvendrelloetona@gmail.com
+
+## Hoja de ruta
+
+En nuestra primera entrega presentamos una Marketplace donde los artitas y compradores pueden interactuar.
+
+
+
+En la próxima actualización, nuestro objetivo es que tanto los funciones de *Sign In* como el de *Log In* lleven a una página de registro o de inscripción funcional. También queremos poder ponder like a los productos que le gustan a los usuarios
+
+
+
+## FAQs
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
